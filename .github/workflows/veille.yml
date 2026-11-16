@@ -1,0 +1,65 @@
+# Veille alternance / CDI junior — exécution matin et soir, publiée sur GitHub Pages.
+# Image Playwright : le mode navigateur (Chromium sans écran) fonctionne tel quel.
+# Le relevé précédent est conservé d'un passage à l'autre via le cache (indépendant
+# de la visibilité des Pages, donc compatible dépôt privé).
+
+name: Veille alternance et CDI
+
+on:
+  schedule:
+    - cron: "0 6,18 * * *"   # 06:00 et 18:00 UTC ≈ 7 h et 19 h à Paris (heure d'hiver)
+  workflow_dispatch: {}       # bouton « Run workflow » pour un lancement manuel
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: veille
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright/python:v1.47.0-jammy
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Relevé précédent (cache)
+        uses: actions/cache@v4
+        with:
+          path: etat
+          key: offers-${{ github.run_id }}
+          restore-keys: offers-
+
+      - name: Tests hors ligne
+        run: python -m unittest discover -s tests -q
+
+      - name: Collecte des offres
+        env:
+          LBA_API_TOKEN: ${{ secrets.LBA_API_TOKEN }}
+          FT_CLIENT_ID: ${{ secrets.FT_CLIENT_ID }}
+          FT_CLIENT_SECRET: ${{ secrets.FT_CLIENT_SECRET }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          PAGE_URL: ${{ vars.PAGE_URL }}
+        run: |
+          python veille.py --previous etat/offers.json --out public --page-url "$PAGE_URL"
+          mkdir -p etat && cp -f public/offers.json etat/offers.json
+
+      - name: Préparer GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Publier sur GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

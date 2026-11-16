@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Veille alternance et CDI</title>
+<style>
+:root { --bg:#f6f7f9; --carte:#fff; --texte:#1c2430; --doux:#5b6675; --ligne:#e1e5ea; --accent:#1f4e79;
+  --sur-accent:#fff; --alt:#e6f0fa; --cdi:#eef6ea; --new:#fff1d6; --jun:#e9e4fb; --nsp:#eceff2; }
+@media (prefers-color-scheme: dark) { :root { --bg:#11151a; --carte:#1a2028; --texte:#e7ebf0; --doux:#9aa5b3;
+  --ligne:#2a323d; --accent:#7fb2e5; --sur-accent:#0b1520; --alt:#1d3247; --cdi:#21331d; --new:#4a3a17;
+  --jun:#33294f; --nsp:#262c34; } }
+* { box-sizing:border-box }
+body { margin:0; background:var(--bg); color:var(--texte); font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif }
+main { max-width:880px; margin:0 auto; padding:24px 16px 48px }
+h1 { font-size:22px; margin:0 0 4px }
+.sous { color:var(--doux); margin:0 0 14px }
+.barre { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; position:sticky; top:0; background:var(--bg); padding:8px 0; z-index:1 }
+.barre button { border:1px solid var(--ligne); background:var(--carte); color:var(--texte); border-radius:999px; padding:6px 12px; cursor:pointer; font:inherit }
+.barre button[aria-pressed=true] { background:var(--accent); border-color:var(--accent); color:var(--sur-accent) }
+.barre input { flex:1 1 200px; min-width:0; border:1px solid var(--ligne); background:var(--carte); color:var(--texte); border-radius:8px; padding:6px 10px; font:inherit }
+.offre { background:var(--carte); border:1px solid var(--ligne); border-radius:10px; padding:12px 14px; margin-bottom:10px }
+.offre h2 { font-size:16px; margin:6px 0 2px; overflow-wrap:anywhere }
+.offre a { color:var(--accent); text-decoration:none } .offre a:hover { text-decoration:underline }
+.tete { display:flex; gap:6px; align-items:center; flex-wrap:wrap }
+.tag { font-size:12px; border-radius:6px; padding:1px 7px; font-weight:600 }
+.tag.alt { background:var(--alt) } .tag.cdi { background:var(--cdi) } .tag.new { background:var(--new) }
+.tag.jun { background:var(--jun) } .tag.nsp { background:var(--nsp); font-weight:500 }
+.date { color:var(--doux); font-size:12px; margin-left:auto }
+.meta { margin:2px 0; color:var(--doux) } .meta strong { color:var(--texte) } .petit { font-size:13px }
+details { background:var(--carte); border:1px solid var(--ligne); border-radius:8px; padding:8px 12px; margin:0 0 12px; color:var(--doux) }
+details.alerte { background:var(--new); color:var(--texte) }
+details ul { margin:6px 0 0; padding-left:18px }
+.vide { color:var(--doux); text-align:center; padding:32px 0 }
+</style></head><body><main>
+<h1>Veille alternance et CDI junior</h1>
+<p class="sous">Mise à jour le 13/11/2026 à 17:55 · 11 offres (0 alternance, 11 CDI) · 11 nouvelle(s)</p>
+<details class="alerte"><summary>2 source(s) en erreur</summary><ul><li>Mistral AI (lever) : HTTP Error 404: Not Found</li><li>Doctolib (greenhouse) : HTTP Error 404: Not Found</li></ul></details>
+<details><summary>Sources interrogées (23)</summary><ul><li>Airbus : 7 lues, 3 retenues</li><li>Scaleway : 32 lues, 2 retenues</li><li>Mistral AI : <em>erreur</em></li><li>Theodo : 128 lues, 5 retenues</li><li>Pigment : 125 lues, 0 retenues</li><li>Odaseva : 15 lues, 0 retenues</li><li>Qonto : 0 lues, 0 retenues</li><li>Malt : 31 lues, 0 retenues</li><li>Brevo : 26 lues, 0 retenues</li><li>Margo : 64 lues, 0 retenues</li><li>VO2 Group : 42 lues, 0 retenues</li><li>Ogury : 2 lues, 0 retenues</li><li>Datadog : 386 lues, 0 retenues</li><li>Doctolib : <em>erreur</em></li><li>DataDome : 25 lues, 0 retenues</li><li>Dashlane : 16 lues, 0 retenues</li><li>Tenable : 47 lues, 0 retenues</li><li>Dataiku : 14 lues, 1 retenues</li><li>Algolia : 30 lues, 0 retenues</li><li>Mirakl : 21 lues, 0 retenues</li><li>Artefact : 54 lues, 0 retenues</li><li>Ivalua : 35 lues, 0 retenues</li><li>Shift Technology : 10 lues, 0 retenues</li></ul></details>
+<div class="barre">
+<button data-f="tous" aria-pressed="true">Toutes</button>
+<button data-f="nouveau" aria-pressed="false">Nouvelles</button>
+<button data-f="Alternance" aria-pressed="false">Alternance</button>
+<button data-f="CDI" aria-pressed="false">CDI</button>
+<button data-f="junior" aria-pressed="false">CDI junior</button>
+<input type="search" placeholder="Filtrer : ville, entreprise, mot-clé…" aria-label="Filtrer">
+</div>
+<section id="liste"><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="ingenieur systemes mecaniques &amp; infrastructures satcom (f/h) airbus toulouse area"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 10/11/2026</span></div><h2><a href="https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/Ingnieur-RadioFrquences-et-dploiement--H-F-_JR10434248" target="_blank" rel="noopener noreferrer">Ingénieur Systèmes Mécaniques &amp; Infrastructures SATCOM (f/h)</a></h2><p class="meta"><strong>Airbus</strong> · Toulouse Area</p><p class="meta petit">Temps plein · Site carrières (Workday)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="1" data-texte="airbus protect - ingenieur systeme airtraffic management (all gender) airbus toulouse area"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag jun">Junior</span><span class="date">publiée le 15/10/2026</span></div><h2><a href="https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/Airbus-Protect---Ingnieur-Systme-AirTraffic-Management--All-Gender-_JR10450977" target="_blank" rel="noopener noreferrer">Airbus Protect - Ingénieur Système AirTraffic Management (All Gender)</a></h2><p class="meta"><strong>Airbus</strong> · Toulouse Area</p><p class="meta petit">Temps plein · Site carrières (Workday)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="devsecops engineer - aocs / gnc systems (m/f) airbus toulouse area"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 14/10/2026</span></div><h2><a href="https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/DevSecOps-Engineer---AOCS---GNC-Systems--m-f-_JR10427672" target="_blank" rel="noopener noreferrer">DevSecOps Engineer - AOCS / GNC Systems (m/f)</a></h2><p class="meta"><strong>Airbus</strong> · Toulouse Area</p><p class="meta petit">Temps plein · Site carrières (Workday)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="infrastructure engineer dataiku france, remote"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 24/08/2026</span></div><h2><a href="https://job-boards.greenhouse.io/dataiku/jobs/6148066004" target="_blank" rel="noopener noreferrer">Infrastructure Engineer</a></h2><p class="meta"><strong>Dataiku</strong> · France, Remote</p><p class="meta petit">Site carrières (Greenhouse)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="site reliability engineer (sre) data &amp; webcloud scaleway paris"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 10/07/2026</span></div><h2><a href="https://jobs.lever.co/scaleway/b08c0bd9-7537-4b38-b17e-a5af688aedcb" target="_blank" rel="noopener noreferrer">Site Reliability Engineer (SRE) Data &amp; Webcloud</a></h2><p class="meta"><strong>Scaleway</strong> · Paris</p><p class="meta petit">Full-time (long term) · Site carrières (Lever)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="devops engineer - cdi paris - theodo cloud theodo paris"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 20/04/2026</span></div><h2><a href="https://jobs.lever.co/theodo/b98321f3-cc57-4479-a2b2-632bfebe726b" target="_blank" rel="noopener noreferrer">DevOps Engineer  - CDI Paris - Theodo Cloud</a></h2><p class="meta"><strong>Theodo</strong> · Paris</p><p class="meta petit">CDI · Site carrières (Lever)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="cloud engineer - cdi paris - theodo cloud theodo paris"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 13/03/2026</span></div><h2><a href="https://jobs.lever.co/theodo/a108423d-cbb4-4d73-a1e1-967a49d1575b" target="_blank" rel="noopener noreferrer">Cloud Engineer  - CDI Paris - Theodo Cloud</a></h2><p class="meta"><strong>Theodo</strong> · Paris</p><p class="meta petit">CDI · Site carrières (Lever)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="devops - cdi paris - theodo cloud theodo paris"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 03/02/2026</span></div><h2><a href="https://jobs.lever.co/theodo/32a60ebe-366a-4ccc-a6aa-5bf7e8211618" target="_blank" rel="noopener noreferrer">DevOps - CDI Paris - Theodo Cloud</a></h2><p class="meta"><strong>Theodo</strong> · Paris</p><p class="meta petit">CDI · Site carrières (Lever)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="site reliability engineer - pole run - cdi paris - theodo cloud theodo paris"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 25/11/2024</span></div><h2><a href="https://jobs.lever.co/theodo/516ebce2-6d31-4987-9e85-fa23cb243d72" target="_blank" rel="noopener noreferrer">Site Reliability Engineer - Pôle Run - CDI Paris - Theodo Cloud</a></h2><p class="meta"><strong>Theodo</strong> · Paris</p><p class="meta petit">CDI · Site carrières (Lever)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="site reliability engineer - sre scaleway paris"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 05/04/2024</span></div><h2><a href="https://jobs.lever.co/scaleway/b0f0fe3a-3ace-4c93-bbf7-61de22f12c4f" target="_blank" rel="noopener noreferrer">Site Reliability Engineer - SRE</a></h2><p class="meta"><strong>Scaleway</strong> · Paris</p><p class="meta petit">Full-time (long term) · Site carrières (Lever)</p></article><article class="offre" data-type="CDI" data-nouveau="1" data-junior="0" data-texte="sre - cdi paris - theodo cloud theodo paris"><div class="tete"><span class="tag cdi">CDI</span><span class="tag new">Nouveau</span><span class="tag nsp">Niveau non précisé</span><span class="date">publiée le 08/03/2022</span></div><h2><a href="https://jobs.lever.co/theodo/48b3fb1c-deef-492e-bd25-1decdc921144" target="_blank" rel="noopener noreferrer">SRE  - CDI Paris - Theodo Cloud</a></h2><p class="meta"><strong>Theodo</strong> · Paris</p><p class="meta petit">CDI · Site carrières (Lever)</p></article></section>
+<p class="vide" id="rien" hidden>Aucune offre ne correspond à ce filtre.</p>
+</main>
+<script>
+const boutons = document.querySelectorAll('.barre button');
+const champ = document.querySelector('.barre input');
+let filtre = 'tous';
+const plat = s => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+function garde(el) {
+  if (filtre === 'nouveau') return el.dataset.nouveau === '1';
+  if (filtre === 'junior') return el.dataset.junior === '1';
+  return filtre === 'tous' || el.dataset.type === filtre;
+}
+function applique() {
+  const q = plat(champ.value.trim());
+  let n = 0;
+  document.querySelectorAll('.offre').forEach(el => {
+    const ok = garde(el) && (!q || el.dataset.texte.includes(q));
+    el.hidden = !ok; if (ok) n++;
+  });
+  document.getElementById('rien').hidden = n > 0 || !document.querySelector('.offre');
+}
+boutons.forEach(b => b.addEventListener('click', () => {
+  filtre = b.dataset.f; boutons.forEach(x => x.setAttribute('aria-pressed', x === b)); applique();
+}));
+champ.addEventListener('input', applique);
+</script></body></html>

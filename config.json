@@ -1,0 +1,87 @@
+{
+  "filtres": {
+    "france_uniquement": true,
+    "villes": [],
+    "alternance_domaines": [
+      "cyber", "cybersecurite", "cyber-securite", "cybersecurity", "securite", "security",
+      "secops", "soc", "siem", "csirt", "cert", "pentest", "pentester", "blue team", "red team",
+      "grc", "iam", "devops", "devsecops", "dev sec ops", "sre", "ci/cd", "cicd"
+    ],
+    "cdi_metiers": [
+      "devops", "devsecops", "dev sec ops",
+      "cloud engineer", "ingenieur cloud", "cloud security", "securite cloud", "securite du cloud",
+      "platform engineer", "platform engineering", "ingenieur plateforme",
+      "sre", "site reliability", "cloudops", "cloud ops", "cloud operations",
+      "infrastructure engineer", "ingenieur infrastructure", "ingenieur infrastructures",
+      "ingenieur infra", "system engineer", "systems engineer", "ingenieur systeme",
+      "ingenieur systemes", "administrateur systeme", "administrateur systemes",
+      "administratrice systeme", "administratrice systemes",
+      "ci/cd", "cicd", "build engineer", "release engineer", "ingenieur linux", "linux engineer"
+    ],
+    "exclure_titre": [
+      "embarque", "embedded", "avionique", "mbse", "propulsion", "satellite", "spatial", "naval",
+      "ferroviaire", "automobile", "mecanique", "electronique", "hardware", "fpga", "asic",
+      "commercial", "sales", "presales", "avant-vente", "business developer", "account",
+      "marketing", "recruteur", "recruiter", "juriste", "legal", "comptable", "achats",
+      "hse", "qhse", "sante", "prevention", "incendie", "surete de fonctionnement",
+      "securite alimentaire", "securite au travail", "securite industrielle",
+      "agent de securite", "agent de surete", "securite des personnes", "gardiennage"
+    ],
+    "cdi_experience_max_ans": 2,
+    "cdi_garder_niveau_non_precise": true
+  },
+
+  "workday_recherches": [
+    "alternance", "apprenti", "devops", "devsecops", "cloud", "cybersécurité", "security",
+    "SRE", "infrastructure", "platform engineer", "CI/CD", "junior"
+  ],
+
+  "entreprises": [
+    {"nom": "Airbus", "ats": "workday", "url": "https://ag.wd3.myworkdayjobs.com/Airbus"},
+
+    {"nom": "Scaleway", "ats": "lever", "id": "scaleway"},
+    {"nom": "Mistral AI", "ats": "lever", "id": "mistral"},
+    {"nom": "Theodo", "ats": "lever", "id": "theodo"},
+    {"nom": "Pigment", "ats": "lever", "id": "pigment"},
+    {"nom": "Odaseva", "ats": "lever", "id": "odaseva"},
+    {"nom": "Qonto", "ats": "lever", "id": "qonto"},
+    {"nom": "Malt", "ats": "lever", "id": "malt"},
+    {"nom": "Brevo", "ats": "lever", "id": "brevo"},
+    {"nom": "Margo", "ats": "lever", "id": "margo-group"},
+    {"nom": "VO2 Group", "ats": "lever", "id": "vo2-group"},
+    {"nom": "Ogury", "ats": "lever", "id": "ogury"},
+
+    {"nom": "Datadog", "ats": "greenhouse", "id": "datadog"},
+    {"nom": "Doctolib", "ats": "greenhouse", "id": "doctolib"},
+    {"nom": "DataDome", "ats": "greenhouse", "id": "ddome"},
+    {"nom": "Dashlane", "ats": "greenhouse", "id": "dashlane"},
+    {"nom": "Tenable", "ats": "greenhouse", "id": "tenableinc"},
+    {"nom": "Dataiku", "ats": "greenhouse", "id": "dataiku"},
+    {"nom": "Algolia", "ats": "greenhouse", "id": "algolia"},
+    {"nom": "Mirakl", "ats": "greenhouse", "id": "mirakllabs"},
+    {"nom": "Artefact", "ats": "greenhouse", "id": "artefactjobs"},
+    {"nom": "Ivalua", "ats": "greenhouse", "id": "ivalua"},
+    {"nom": "Shift Technology", "ats": "greenhouse", "id": "shifttechnology"},
+
+    {"_commentaire": "EXEMPLE mode navigateur pour un site sans API (SuccessFactors, iCIMS, Talentsoft, site maison). Mets actif=true, remplace url par la page de résultats filtrée (alternance / cyber / DevOps), et renseigne dom uniquement si le site n'a pas de données JSON-LD. Voir le README, section « Mode navigateur ».",
+     "nom": "Exemple grand groupe (navigateur)", "ats": "navigateur", "actif": false,
+     "url": "https://careers.exemple.com/search?keywords=alternance%20cybersecurite&location=France",
+     "dom": {"carte": "li.job-tile", "titre": "a.job-title", "lien": "a.job-title", "lieu": ".job-location", "attendre": "li.job-tile"}}
+  ],
+
+  "complements_api": {
+    "alternance_la_bonne_alternance": {
+      "romes": ["M1801", "M1802", "M1810", "M1805"],
+      "departements": [],
+      "niveau_diplome": "7"
+    },
+    "cdi_france_travail": {
+      "recherches": ["DevOps", "DevSecOps", "Cloud", "SRE", "Platform engineer", "CloudOps",
+                     "ingénieur infrastructure", "ingénieur système"],
+      "departements": [],
+      "jours": 3
+    }
+  },
+
+  "conserver_jours": 30
+}

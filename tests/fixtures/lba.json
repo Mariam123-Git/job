@@ -1,0 +1,37 @@
+{
+  "jobs": [
+    {
+      "identifier": {"id": "abc123", "partner_label": null, "partner_job_id": null},
+      "is_delegated": false,
+      "contract": {"type": ["Apprentissage", "Professionnalisation"], "start": "2027-09-01T00:00:00.000Z", "duration": 36, "remote": "hybrid"},
+      "offer": {
+        "title": "Alternance Analyste SOC - Mastère cybersécurité",
+        "description": "Surveillance du SIEM, traitement des alertes, réponse à incident.",
+        "rome_codes": ["M1802"],
+        "status": "Active",
+        "publication": {"creation": "2026-11-12T08:15:00.000Z", "expiration": "2027-01-12T08:15:00.000Z"},
+        "target_diploma": {"european": "7", "label": "Master, titre ingénieur..."}
+      },
+      "workplace": {"name": "CYBERDEF SAS", "brand": "CyberDef", "legal_name": "CYBERDEF SAS",
+                    "location": {"address": "12 rue de la Paix 31000 Toulouse", "geopoint": {"type": "Point", "coordinates": [1.44, 43.6]}}},
+      "apply": {"url": "https://labonnealternance.apprentissage.beta.gouv.fr/emploi/abc123", "phone": null, "recipient_id": "x"}
+    },
+    {
+      "identifier": {"id": null, "partner_label": "Hellowork", "partner_job_id": "hw-42"},
+      "contract": {"type": ["Apprentissage"], "start": null},
+      "offer": {"title": "Ingénieur DevSecOps en alternance <script>alert(1)</script>", "description": "Kubernetes, CI/CD",
+                "status": "Active", "publication": {"creation": "2026-11-11T10:00:00.000Z"}},
+      "workplace": {"name": "Société Cloud", "location": {"address": "75008 Paris"}},
+      "apply": {"url": "javascript:alert(1)"}
+    },
+    {
+      "identifier": {"id": "pourvue1"},
+      "contract": {"type": ["Apprentissage"]},
+      "offer": {"title": "Administrateur systèmes Linux", "status": "Filled", "publication": {"creation": "2026-10-01T10:00:00.000Z"}},
+      "workplace": {"name": "Ancienne", "location": {"address": "Caen"}},
+      "apply": {"url": "https://exemple.fr"}
+    }
+  ],
+  "recruiters": [],
+  "warnings": []
+}

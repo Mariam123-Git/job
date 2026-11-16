@@ -1,0 +1,21 @@
+# Veille alternance / CDI junior, lancée par une planification GitLab (7 h et 19 h, heure de Paris).
+# Page et offers.json publiés sur GitLab Pages ; le relevé précédent est relu dans les
+# artefacts du dernier passage (jeton du job) pour repérer les nouvelles offres.
+
+stages: [veille]
+
+pages:
+  stage: veille
+  image: mcr.microsoft.com/playwright/python:v1.47.0-jammy  # inclut Chromium pour le mode navigateur
+  timeout: 30 minutes
+  variables:
+    PRECEDENT: "$CI_API_V4_URL/projects/$CI_PROJECT_ID/jobs/artifacts/$CI_DEFAULT_BRANCH/raw/public/offers.json?job=pages"
+  script:
+    - python -m unittest discover -s tests -q
+    - python veille.py --previous "$PRECEDENT" --out public --page-url "$CI_PAGES_URL"
+  artifacts:
+    paths: [public]
+    expire_in: 30 days
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $CI_PIPELINE_SOURCE == "web"

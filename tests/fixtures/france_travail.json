@@ -1,0 +1,37 @@
+{
+  "resultats": [
+    {
+      "id": "201XYZ",
+      "intitule": "Ingénieur DevOps (H/F)",
+      "description": "CI/CD GitLab, Kubernetes, AWS.",
+      "dateCreation": "2026-11-12T14:02:11.000Z",
+      "lieuTravail": {"libelle": "14 - HEROUVILLE ST CLAIR"},
+      "entreprise": {"nom": "INFRANORD"},
+      "typeContrat": "CDI",
+      "typeContratLibelle": "Contrat à durée indéterminée",
+      "experienceExige": "D",
+      "experienceLibelle": "Débutant accepté",
+      "origineOffre": {"urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/201XYZ"}
+    },
+    {
+      "id": "203DEF",
+      "intitule": "Ingénieur Cloud (H/F)",
+      "description": "Migration vers Azure.",
+      "dateCreation": "2026-11-12T10:00:00.000Z",
+      "lieuTravail": {"libelle": "69 - LYON 03"},
+      "entreprise": {"nom": "CLOUDLYON"},
+      "typeContrat": "CDI",
+      "experienceExige": "E",
+      "experienceLibelle": "5 ans - expérience exigée"
+    },
+    {
+      "id": "202ABC",
+      "intitule": "Assistant comptable (H/F)",
+      "description": "Saisie comptable au sein d'une société de services.",
+      "dateCreation": "2026-11-12T09:00:00.000Z",
+      "lieuTravail": {"libelle": "14 - CAEN"},
+      "entreprise": {},
+      "typeContrat": "CDI"
+    }
+  ]
+}
